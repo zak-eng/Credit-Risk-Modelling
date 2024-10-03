@@ -114,8 +114,7 @@ def get_data_from_url(year):
         print(" SUCCESS   : sample_" + str(year) + ".zip deletion complete ")
         #transform_orig_to_csv(year, str(START_YEAR)+"_"+str(END_YEAR)+"_orig.csv")
         transform_svcg_to_csv(year, str(START_YEAR)+"_"+str(END_YEAR)+"_svcg.csv")
-        #(Thread(target=write_into_consolidated_file, args=(year, create_consolidated_file('orig'),))).start()
-        #(Thread(target=write_into_consolidated_file, args=(year, create_consolidated_file('svcg'),))).start()
+    
     except zipfile.BadZipfile:
         print(" ERROR   : Unsuccesfull to unzip "+DIR_NAME + "/sample_" + str(year) + '.zip')
         print (zipfile.BadZipfile)
