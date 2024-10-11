@@ -112,8 +112,7 @@ def get_data_from_url(year):
         print(" SUCCESS   : sample_" + str(year) + ".zip unzip complete ")
         os.remove(DIR_NAME + "/sample_" + str(year) + '.zip')
         print(" SUCCESS   : sample_" + str(year) + ".zip deletion complete ")
-        #please there is two file to download one is orig and the second is svcg to download one of them just comment the other. if possible fix it. thx
-        #transform_orig_to_csv(year, str(START_YEAR)+"_"+str(END_YEAR)+"_orig.csv")
+        transform_orig_to_csv(year, str(START_YEAR)+"_"+str(END_YEAR)+"_orig.csv")
         transform_svcg_to_csv(year, str(START_YEAR)+"_"+str(END_YEAR)+"_svcg.csv")
     
     except zipfile.BadZipfile:
